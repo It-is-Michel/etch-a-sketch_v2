@@ -5,6 +5,8 @@ function createGrid(squaresPerSide) {
     
 
     let squaresContainerDivElement = document.createElement("div");
+    squaresContainerDivElement.style["height"] = "90vh";
+    squaresContainerDivElement.style["width"] = "90vh";
 
     let numberOfRequiredSquares = squaresPerSide ** 2;
     for (let i = 0; i < numberOfRequiredSquares; i++) {
