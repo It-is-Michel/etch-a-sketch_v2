@@ -19,5 +19,8 @@ function createGrid(squaresPerSide) {
         squaresContainerDivElement.appendChild(newSquareDivElement);
     }
 
+    squaresContainerDivElement.style["display"] = "flex";
+    squaresContainerDivElement.style["flex-wrap"] = "wrap";
+
     return squaresContainerDivElement;
 }
