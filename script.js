@@ -9,8 +9,13 @@ function createGrid(squaresPerSide) {
     squaresContainerDivElement.style["width"] = "90vh";
 
     let numberOfRequiredSquares = squaresPerSide ** 2;
+    let sizeOfEachSquare = `${90 / squaresPerSide}vh`;
     for (let i = 0; i < numberOfRequiredSquares; i++) {
         let newSquareDivElement = document.createElement("div");
+        
+        newSquareDivElement.style["height"] = sizeOfEachSquare;
+        newSquareDivElement.style["aspectRatio"] = "1/1";
+
         squaresContainerDivElement.appendChild(newSquareDivElement);
     }
 
