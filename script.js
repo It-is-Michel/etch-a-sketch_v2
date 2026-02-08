@@ -8,6 +8,9 @@ function createGrid(squaresPerSide) {
     squaresContainerDivElement.style["height"] = "90vh";
     squaresContainerDivElement.style["width"] = "90vh";
 
+    let paintBlack = (e) => {e.target.style["background-color"] = "black"};
+    squaresContainerDivElement.addEventListener("mouseover", paintBlack);
+
     let numberOfRequiredSquares = squaresPerSide ** 2;
     let sizeOfEachSquare = `${90 / squaresPerSide}vh`;
     for (let i = 0; i < numberOfRequiredSquares; i++) {
