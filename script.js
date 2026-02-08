@@ -24,3 +24,6 @@ function createGrid(squaresPerSide) {
 
     return squaresContainerDivElement;
 }
+
+let grid16x16DivElement = createGrid(16);
+document.body.appendChild(grid16x16DivElement);
