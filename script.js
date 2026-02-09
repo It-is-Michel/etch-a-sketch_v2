@@ -41,4 +41,23 @@ let grid16x16DivElement = createGrid(16);
 document.body.appendChild(grid16x16DivElement);
 
 let createNewGridButtonElement = document.querySelector("#createNewGridButton");
-createNewGridButtonElement.addEventListener("click", () => {grid16x16DivElement = replaceCurrentGrid(grid16x16DivElement, 16)});
+createNewGridButtonElement.addEventListener("click", () => {
+    let newGridSize = Number(prompt("Type in the new size for the grid."));
+
+    let inputIsValid = true;
+    if (typeof newGridSize != "number") {
+        alert("You have to enter an integer number between 0 and 100.");
+        inputIsValid = false;
+    } else if (newGridSize % 1 != 0) {
+        alert("The number has to be an integer, not a decimal.")
+        inputIsValid = false;
+    } else if (newGridSize <= 0) {
+        alert("The new size can't be minor than 0.");
+        inputIsValid = false;
+    } else if (newGridSize > 100) {
+        alert("The new size can't be bigger than 100.");
+        inputIsValid = false;
+    }
+
+    if (inputIsValid) {grid16x16DivElement = replaceCurrentGrid(grid16x16DivElement, newGridSize)};
+});
