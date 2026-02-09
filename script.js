@@ -28,10 +28,11 @@ function createGrid(squaresPerSide) {
     return squaresContainerDivElement;
 }
 
-function replaceCurrentGrid(gridContainer, newGridSize) {
-    gridContainer.removeChild(gridContainer.firstElementChild);
+function replaceCurrentGrid(oldGrid, newGridSize) {
     let newGrid = createGrid(newGridSize);
-    gridContainer.appendChild(newGrid);
+    oldGrid.after(newGrid);
+    
+    oldGrid.remove();
 }
 
 let grid16x16DivElement = createGrid(16);
