@@ -33,6 +33,8 @@ function replaceCurrentGrid(oldGrid, newGridSize) {
     oldGrid.after(newGrid);
     
     oldGrid.remove();
+
+    return newGrid;
 }
 
 let grid16x16DivElement = createGrid(16);
