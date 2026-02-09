@@ -39,3 +39,6 @@ function replaceCurrentGrid(oldGrid, newGridSize) {
 
 let grid16x16DivElement = createGrid(16);
 document.body.appendChild(grid16x16DivElement);
+
+let createNewGridButtonElement = document.querySelector("#createNewGridButton");
+createNewGridButtonElement.addEventListener("click", () => {grid16x16DivElement = replaceCurrentGrid(grid16x16DivElement, 16)});
